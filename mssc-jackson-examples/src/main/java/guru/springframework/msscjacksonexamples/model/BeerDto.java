@@ -1,5 +1,6 @@
 package guru.springframework.msscjacksonexamples.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,6 +20,7 @@ public class BeerDto {
     private OffsetDateTime createdDate;
     @Null
     private OffsetDateTime lastModifiedDate;
+    @JsonProperty("beerId")
     @Null
     private UUID id;
     @NotBlank
